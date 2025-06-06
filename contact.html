@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASCOR Labs - Transforming Drug Discovery</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg" />
+</head>
+<body>
+<header>
+  <div class="header-row">
+    <img src="assets/images/logo.png" class="logo" alt="ASCOR Labs Logo" />
+    <button class="nav-toggle" aria-label="Open navigation menu"><span></span></button>
+    <ul class="nav-menu">
+      <li><a href="index.html" >Home</a></li>
+      <li><a href="about.html">Who We Are</a></li>
+      <li><a href="services.html">What We Do</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </div>
+</header>
+<script>
+  // Responsive nav menu toggle
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', function() {
+      navMenu.classList.toggle('open');
+      navToggle.classList.toggle('open'); // Hide hamburger when menu is open
+    });
+    // Close menu on link click (mobile UX)
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        navToggle.classList.remove('open'); // Show hamburger again
+      });
+    });
+  }
+</script>
+
+
+<!-- <section class="hero contact-hero-bg">
+  <div class="hero-content contact-hero-content">
+    <h1>Contact ASCOR Labs</h1>
+    <p>We'd love to hear from you.<br>Reach us anytime by email or phone.</p>
+  </div>
+</section> -->
+<section class="contact-hero-img-banner"></section>
+
+<section class="contact-main-wrap">
+  <div class="contact-card info-card">
+    <h2>Contact Us</h2>
+    <div class="contact-info-list">
+      <div class="contact-info-item">
+        <img src="assets/images/phone.png" class="contact-info-icon" alt="Phone">
+        <span>+91 7569184252</span>
+      </div>
+      <div class="contact-info-item">
+        <img src="assets/images/email.png" class="contact-info-icon" alt="Email">
+        <span>contact@ascorlabs.com</span>
+      </div>
+      <div class="contact-info-item">
+        <img src="assets/images/location.png" class="contact-info-icon" alt="Address">
+        <span>Biotech Park, Hyderabad, India</span>
+      </div>
+    </div>
+  </div>
+  <form class="contact-card contact-form" autocomplete="off">
+    <h2>Send Us a Message</h2>
+    <div class="form-row">
+      <label>Name</label>
+      <input type="text" required placeholder="Your Name">
+    </div>
+    <div class="form-row">
+      <label>Email</label>
+      <input type="email" required placeholder="your@email.com">
+    </div>
+    <div class="form-row">
+      <label>Message</label>
+      <textarea rows="5" required placeholder="How can we help you?"></textarea>
+    </div>
+    <button type="submit" class="contact-submit-btn">Send</button>
+  </form>
+</section>
+
+
+
+    <!-- <main style="padding: 40px;">
+        <main>
+<section id="contact">
+<h2>Contact Us</h2>
+<p>Email us at <a href="mailto:contact@ascorlabs.com">contact@ascorlabs.com</a></p>
+</section>
+</main>
+    </main> -->
+
+<footer class="site-footer">
+  <div class="footer-columns">
+    <div class="footer-col brand">
+      <img src="assets/images/tree.png" class="footer-logo" alt="ASCOR Labs Logo" />
+      <p>ASCOR Labs provides ethical human organoid systems for advanced research and precision testing across biomedical domains.</p>
+      <div class="social-icons">
+        <a href="#"><span>🌐</span></a>
+        <a href="#"><span>✉️</span></a>
+        <a href="#"><span>🔬</span></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Capabilities</h4>
+      <ul>
+        <li><a href="#">iPSC Organoids</a></li>
+        <li><a href="#">Patient Models</a></li>
+        <li><a href="#">Toxicity Testing</a></li>
+        <li><a href="#">Collaborations</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>ASCOR Labs<br>Biotech Park,<br>Hyderabad, India</p>
+      <p>contact@ascorlabs.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2025 ASCOR Labs. All rights reserved.</div>
+</footer>
+</body>
+</html>
